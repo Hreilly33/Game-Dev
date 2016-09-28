@@ -1,0 +1,53 @@
+<h > basic web page by hayden </h1>
+
+
+
+
+This is a webpage<br>
+
+<div id="myQuestion">?</div>
+<input type=button value="click me" onclick="{
+document.getElementbyId('myQuestion').innerhtml= 'hello world'
+}"><br>
+
+
+my picture <br><img src="Adolf_Hitler_cropped_restored.jpg" width=400><br>
+image from the web <br><img width=400 src="http://wpmedia.news.nationalpost.com/2015/05/arp2444240_25787549.jpg?quality=65&strip=all&w=620"><br>
+
+<a href="http://www.google.ca">http://www.google.ca</a><br>
+
+this is <b>bold</b>this is <i>italic</i>. this is both <b><i>bold and italic</i></b>
+
+<table border=1>
+<tr><td>Table 1</td><td>Age</td><td>Hair color</td></tr>
+<tr><td>Hayden</td><td>17</td><td>Brown</td></tr>
+<tr><td>Stevan</td><td>17</td><td>Orange</td></tr>
+<tr><td>Dillan</td><td>17</td><td>Black</td></tr>
+<br>
+Here is a list of my favorite Foods
+<lu>
+<li>Pizza
+<li>KD
+<li>Cheese
+<li>other
+</lu>
+<br>
+
+<div id="myDiv01" style="position:relative;left:0;top:0;">wow</div>
+
+<input type=button value="Go Right" onclick="{
+   my01 = document.getElementById('myDiv01')
+   my01.style.left = parseInt(my01.style.left) + 20 + 'px'
+}">
+<input type=button value="Go Left" onclick="{
+   my01 = document.getElementById('myDiv01')
+   my01.style.left = parseInt(my01.style.left) - 20 + 'px'
+}">
+<input type=button value="Go Up" onclick="{
+   my01 = document.getElementById('myDiv01')
+   my01.style.top = parseInt(my01.style.top) - 20 + 'px'
+}">
+<input type=button value="Go down" onclick="{
+   my01 = document.getElementById('myDiv01')
+   my01.style.top = parseInt(my01.style.top) + 20 + 'px'
+}">
