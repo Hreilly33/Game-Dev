@@ -1,0 +1,137 @@
+<h1 align = center > Rock Paper Scissors </h1>
+
+<body>
+    
+ <script>
+
+    
+   function myRockf() {
+   var myAnswer = Math.floor((Math.random() * 3) + 1)
+     
+if (myAnswer == 1){
+     
+    document.getElementById('myOut1').innerHTML = "Tie, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Rock."
+    
+     } else if (myAnswer == 2) {
+     
+    document.getElementById('myOut1').innerHTML = "Bot win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Paper."
+    document.getElementById('myOut3').innerHTML += 1
+    
+     } else {
+     
+    document.getElementById('myOut1').innerHTML = "Player win, "  
+    document.getElementById('myOut2').innerHTML = "Bot chose Scissors."
+    document.getElementById('myOut4').innerHTML += 1
+    
+   }
+    
+if (document.getElementById('myOut3').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Bot win" 
+    
+   }
+   
+   if (document.getElementById('myOut4').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Player win" 
+    
+   }    
+     
+   } 
+   
+   
+   function myPaperf() {
+   var myAnswer = Math.floor((Math.random() * 3) + 1)
+     
+   if (myAnswer == 1){
+     
+    document.getElementById('myOut1').innerHTML = "Player win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Rock."
+    document.getElementById('myOut4').innerHTML += 1 
+     } else if (myAnswer == 2) {
+     
+    document.getElementById('myOut1').innerHTML = "Tie, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Paper."
+     
+     } else {
+     
+    document.getElementById('myOut1').innerHTML = "Bot win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Scissors."
+    document.getElementById('myOut3').innerHTML += 1 
+   }
+   
+   if (document.getElementById('myOut3').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Bot win" 
+    
+   }
+   
+   if (document.getElementById('myOut4').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Player win" 
+    
+   }
+   
+   }
+   
+   
+   
+   function myScissorsf() {
+   var myAnswer = Math.floor((Math.random() * 3) + 1)
+   
+   if (myAnswer == 1){
+     
+    document.getElementById('myOut1').innerHTML = "Bot win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Rock."
+    document.getElementById('myOut3').innerHTML += 1 
+     } else if (myAnswer == 2) {
+     
+    document.getElementById('myOut1').innerHTML = "Player win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Paper."
+    document.getElementById('myOut4').innerHTML += 1
+     } else {
+     
+    document.getElementById('myOut1').innerHTML = "Tie, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Scissors."
+    
+   }
+
+if (document.getElementById('myOut3').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Bot win" 
+    
+   }
+   
+   if (document.getElementById('myOut4').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Player win" 
+    
+   }
+
+   }
+    
+    
+    
+    
+    
+    
+    
+    
+ </script>    
+    
+<br><br><br>
+  
+<input value=Rock id=myRockb type = button onClick="{myRockf()}">
+<input value=Paper id=myPaperb type = button onClick="{myPaperf()}">
+<input value=Scissors id=myScissorsb type = button onClick="{myScissorsf()}">
+<br><br><br>
+    
+<div id=myOut1></div>
+ 
+    
+<div id=myOut5></div>    
+    
+    
+</body>
