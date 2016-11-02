@@ -1,0 +1,44 @@
+<h1 align=center> T1A12-Interval by Hayden             </h1>
+<script>
+function myFunction01(){
+    document.getElementById('myDiv1').style.left = 
+    parseInt(document.getElementById('myDiv1').style.left) + 5 + 'px'
+}
+
+function myFunction02(){
+    //alert()
+    setInterval(myFunction01(),300);
+} 
+</script>
+
+
+<input type=button value=move onclick="{
+  myFunction01()
+}">
+
+
+<input type=button value="show left" onclick="{
+  alert(document.getElementById('myDiv1').style.left)
+}">
+
+
+<input type=button value="setTimeout" onclick="{
+  document.myTime01 = setTimeout('myFunction01()', 500)
+}">
+
+
+<input type=button value="setInterval" onclick="{
+  myFunction02()
+}">
+
+
+<input type=button value="clearInterval" onclick="{
+  alert('get clearInterval working')
+}">
+
+
+
+
+<div id="myDiv1" style="position:relative; left:0; top:0" >
+    wow
+</div>
