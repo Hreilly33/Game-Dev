@@ -1,125 +1,150 @@
+<h1 align = center > Rock Paper Scissors </h1>
 
-<html>
-<head>
-<style>
-div {
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
-}
-
-
-</style>
-</head>
 <body>
     
+ <script>
+
+    
+   function myRockf() {
+   var myAnswer = Math.floor((Math.random() * 3) + 1)
+     
+   if (myAnswer == 1){
+     
+    document.getElementById('myOut1').innerHTML = "Tie, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Rock."
+    
+     } else if (myAnswer == 2) {
+     
+    document.getElementById('myOut1').innerHTML = "Bot win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Paper."
+    document.getElementById('myOut3').innerHTML += 1
+    
+     } else {
+     
+    document.getElementById('myOut1').innerHTML = "Player win, "  
+    document.getElementById('myOut2').innerHTML = "Bot chose Scissors."
+    document.getElementById('myOut4').innerHTML += 1
+    
+   }
+    
+if (document.getElementById('myOut3').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Bot win" 
+    
+   }
+   
+   if (document.getElementById('myOut4').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Player win" 
+    
+   }    
+     
+   } 
+   
+   
+   function myPaperf() {
+   var myAnswer = Math.floor((Math.random() * 3) + 1)
+     
+   if (myAnswer == 1){
+     
+    document.getElementById('myOut1').innerHTML = "Player win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Rock."
+    document.getElementById('myOut4').innerHTML += 1 
+     } else if (myAnswer == 2) {
+     
+    document.getElementById('myOut1').innerHTML = "Tie, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Paper."
+     
+     } else {
+     
+    document.getElementById('myOut1').innerHTML = "Bot win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Scissors."
+    document.getElementById('myOut3').innerHTML += 1 
+   }
+   
+   if (document.getElementById('myOut3').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Bot win" 
+    
+   }
+   
+   if (document.getElementById('myOut4').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Player win" 
+    
+   }
+   
+   }
+   
+   
+   
+   function myScissorsf() {
+   var myAnswer = Math.floor((Math.random() * 3) + 1)
+   
+   if (myAnswer == 1){
+     
+    document.getElementById('myOut1').innerHTML = "Bot win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Rock."
+    document.getElementById('myOut3').innerHTML += 1 
+     } else if (myAnswer == 2) {
+     
+    document.getElementById('myOut1').innerHTML = "Player win, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Paper."
+    document.getElementById('myOut4').innerHTML += 1
+     } else {
+     
+    document.getElementById('myOut1').innerHTML = "Tie, "
+    document.getElementById('myOut2').innerHTML = "Bot chose Scissors."
+    
+   }
+
+if (document.getElementById('myOut3').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Bot win" 
+    
+   }
+   
+   if (document.getElementById('myOut4').innerHTML == "11"){
+    
+   document.getElementById('myOut5').innerHTML += "Player win" 
+    
+   }
+
+   }
+    
+    
+    
+    
+    
+    
+    
+    
+ </script>    
+    
+<br><br><br>
   
-  
+<input value=Rock id=myRockb type = button onClick="{myRockf()}">
+<input value=Paper id=myPaperb type = button onClick="{myPaperf()}">
+<input value=Scissors id=myScissorsb type = button onClick="{myScissorsf()}">
+<br><br><br>
+    
+<div id=myOut1></div>
+
+<br><br><br>
+
+<div id=myOut2></div>
+
+<br><br><br>
+    
+Bot score <div id=myOut3></div>.
+    
+<br><br><br>    
+
+Player Score <div id=myOut4></div>.    
+    
+<br><br><br>    
+    
+<div id=myOut5></div>    
     
     
-    
-                                <script>
-
-function myKeypress() {
- 
-document.getElementById('myOut1').innerHTML =
-' you pressed the ' + String.fromCharCode(event.keyCode) + ' which is ' + event.keyCode + ' in keyCode '    
-    
-}
-
-function myClick() {
-
-document.getElementById('myOut1').innerHTML = 'This is a onClick event.'
-    
-}
-
-function myDBLclick() {
-
-document.getElementById('myOut1').innerHTML = 'This is a ondblclick event.'
-    
-}
-
-function mySelect() {
-
-document.getElementById('myOut1').innerHTML = document.all.myText1.value + ' This is a onSelect event.'
-    
-}
-
-function myMouse() {
-
-document.getElementById('myOut1').innerHTML = 'This is a onmouseover event.'
-    
-}
-
-function ondrag() {
-alert()
-    
-}
-
-function myFunction(e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    var coor = "Coordinates: (" + x + "," + y + ")";
-    document.getElementById('myOut1').innerHTML = coor;
-}
-
-function clearCoor() {
-    document.getElementById('myOut1').innerHTML = "Output goes here";
-}
-
-function dragStart(event) {
-    event.dataTransfer.setData("Text", event.target.id);
-}
-
-function dragging(event) {
-    document.getElementById('myOut1').innerHTML = "The p element is being dragged";
-}
-
-function allowDrop(event) {
-    event.preventDefault();
-}
-
-function drop(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("Text");
-    event.target.appendChild(document.getElementById(data));
-    document.getElementById('myOut1').innerHTML = "The p element was dropped";
-}
-                               </script>
-
-
-<h1 align=center> Events by Hayden</h1>
-
-<body onkeypress="{myKeypress()}">
- 
-
-Click the <b onClick="{myClick()}"> bold </b> text <br><br>
-
-<div1 ondblclick="{myDBLclick()}">Double click me!</div1><br><br>
-
-Press a key on the keyboard!<br><br>
-
-<input id="myText1" type= text value='Select me!' onselect="{mySelect()}"><br><br>
-
-<div2 onmouseover="{myMouse()}">Mouse over me!</div2><br><br>
-
-<div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
-
-<p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
-
-<p id="demo"></p>
-
-<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag me!</p>
-</div>
-
-<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-
-<div3 id="myOut1"> Output goes here</div3><br><br>
-
-
-
-
 </body>
-</html>
