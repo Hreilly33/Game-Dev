@@ -1,14 +1,46 @@
 <h1 align=center> T1A12-Interval by Hayden             </h1>
+
+
 <script>
+
+var mySpeedleft = 5
+var mySpeedtop = 5
+
 function myFunction01(){
     document.getElementById('myDiv1').style.left = 
-    parseInt(document.getElementById('myDiv1').style.left) + 5 + 'px'
+    parseInt(document.getElementById('myDiv1').style.left) + mySpeedleft + 'px'
+    
+    
+    
+    if (parseInt(document.getElementById('myDiv1').style.left) >= 1200){
+     mySpeedleft = mySpeedleft  * -1
+    }
+ 
+  if (parseInt(document.getElementById('myDiv1').style.left) <= -1){
+     mySpeedleft = mySpeedleft  * -1
+    }
+ 
+  document.getElementById('myDiv1').style.top = 
+    parseInt(document.getElementById('myDiv1').style.top) + mySpeedtop + 'px'
+    
+    
+    
+    if (parseInt(document.getElementById('myDiv1').style.top) >= 700){
+     mySpeedtop = mySpeedtop  * -1
+    }
+ 
+  if (parseInt(document.getElementById('myDiv1').style.top) <= -1){
+     mySpeedtop = mySpeedtop  * -1
+    }
+    
+    
 }
 
 function myFunction02(){
     //alert()
-    setInterval(myFunction01(),300);
-} 
+}
+
+
 </script>
 
 
@@ -21,6 +53,9 @@ function myFunction02(){
   alert(document.getElementById('myDiv1').style.left)
 }">
 
+<input type=button value="show top" onclick="{
+  alert(document.getElementById('myDiv1').style.top)
+}">
 
 <input type=button value="setTimeout" onclick="{
   document.myTime01 = setTimeout('myFunction01()', 500)
@@ -28,12 +63,12 @@ function myFunction02(){
 
 
 <input type=button value="setInterval" onclick="{
-  myFunction02()
+  document.myInterval1 = setInterval('myFunction01()',10); 
 }">
 
 
 <input type=button value="clearInterval" onclick="{
-  alert('get clearInterval working')
+  clearInterval(document.myInterval1)
 }">
 
 
