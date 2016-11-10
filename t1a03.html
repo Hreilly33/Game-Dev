@@ -10,7 +10,19 @@
   for (myCount = 1; myCount <= myIn.value; myCount++){
     if (myCount == 2 ){
       myOut.innerHTML +='<font color=red>' + myCount + '</font></br>'
-    } else myOut.innerHTML += myCount + '</br>'
+    } 
+    
+   else if (myCount >= 9){
+    myOut.innerHTML +='<font color=Green>' + myCount + '</font><br>'
+    }
+    
+   else if (myCount >= 2 && myCount <= 5){
+    myOut.innerHTML +='<font color=blue>' + myCount + '</font><br>'
+    }
+    
+    else myOut.innerHTML += myCount + '</br>'
+    
+    
   }
 
 }"> <br><br>
